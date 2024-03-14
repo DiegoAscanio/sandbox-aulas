@@ -13,7 +13,7 @@ OR
     docker pull diegoascanio/cefetmg:container-aulas
     ```
 
-2. Run this image (your linux user needs to be at docker group):
+2. Run this image (your linux user needs to be at docker and dialout (or tty) groups):
     ```bash
     # if you're programming an arduino, you need to pass the device to the container
     docker run -it --rm -p 6080:6080 -v ~/container-aulas-cefetmg:/container-aulas-cefetmg --ulimit nofile=65536:65536 --device /dev/ttyUSB0:/dev/ttyUSB0 diegoascanio/cefetmg:container-aulas
